@@ -29,8 +29,16 @@
 
         $bezeichnung =  $row['Abteilungsbezeichnung'];
         $chef = $row['Abteilungsleiter'];
+
+        $sql = "SELECT vorname, nachname FROM mitarbeiter WHERE mitarbeiterid='$chef';";
+        $stm = $pdo->query($sql);
+        $row = $stm->fetch();
+        
+        $vorname = $row['vorname'];
+        $nachname = $row['nachname'];
+
         print("Bezeichnung: $bezeichnung<br />");
-        print("Vorgesetzter: $chef<br />");
+        print("Vorgesetzter: $vorname $nachname<br />");
     ?>
 </body>
 </html>

@@ -31,8 +31,8 @@
         $number = 1;
         foreach ($rows as $row) {
             print("$number.Zeile: <br />");
-            print('<a href="#">');
-                print("Inhalt: $row[0] - $row[1] - $row[2]");
+            print('<a href="abteilung.php" target="_blank">');
+                print("Inhalt: $row[0] - $row[1]");
             print("</a>");
             print("<br />");
             $number++;

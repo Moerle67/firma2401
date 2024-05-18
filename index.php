@@ -21,7 +21,7 @@
         foreach ($rows as $row) {
             $id = $row['AbteilungsID'];
             print("$number.Zeile: <br />");
-            print("<a href='abteilung.php?abteilung=$id' target='_blank'>");
+            print("<a href='abt2.php?abteilung=$id' target='_blank'>");
                 print("Inhalt: $row[0] - $row[1]");
             print("</a>");
             print("<br />");

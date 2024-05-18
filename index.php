@@ -7,18 +7,7 @@
 </head>
 <body>
     <?php
-        $host = "localhost";
-        $dbase = "firmaxyz";
-
-        $user = "root";
-        $pwd = "";
-        try {
-            $pdo = new PDO("mysql:host=$host;dbname=$dbase", "$user", "$pwd");
-            print("Datenbank geöffnet<br />");
-        }
-        catch(PDOException $e) {
-            print("Da hat etwas nicht geklappt!<br />");
-        }
+        include("datenbank.php");
         // SQL Befehl generieren
         $sql = "SELECT * FROM abteilung;";
 
@@ -36,8 +25,11 @@
                 print("Inhalt: $row[0] - $row[1]");
             print("</a>");
             print("<br />");
-            $number++;
+            $number++; 
+            // $number = $number + 1;
+            // $number += 1;
         }
+        print("Habe fertig...");
     ?>
 </body>
 </html>
